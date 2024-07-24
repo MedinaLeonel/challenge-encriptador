@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Encriptador de Texto</h1>
+        </header>
+        <main>
+            <div class="content">
+                <div class="left-side">
+                    <textarea id="textInput" placeholder="Ingrese el texto aquí..."></textarea>
+                    <button onclick="copiarTextoIzquierdo()" id="copiarIzquierdo">Copiar</button>
+                </div>
+                <div class="right-side">
+                    <div class="buttons">
+                        <button onclick="procesarTexto()" id="encriptar">Encriptar</button>
+                        <button onclick="procesarTextoEncriptado()" id="desencriptar">Desencriptar</button>
+                    </div>
+                    <textarea id="parrafo" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+                    <button onclick="copiarTexto()" id="copiar">Copiar</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Alumno: Leonel Arnaldo Medina</p>
+            <p>Academia: Alura LATAM</p>
+            <p>Powered by ORACLE®</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

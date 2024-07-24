@@ -1,0 +1,134 @@
+/* Importar la tipografía "Inter" desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0FFFF; 
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Encabezado */
+header {
+    width: 100%;
+    background-color: #0A3871; 
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+    color: white;
+    border-radius: 0.5rem; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 90vw;
+    padding: 1rem;
+    flex-grow: 1; /* Para empujar el footer hacia abajo */
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centrar los botones en el medio */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 90vw;
+}
+
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+textarea {
+    width: 100%;
+    height: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    resize: none;
+    font-size: 1rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+button {
+    background-color: #0A3871; /* Color especificado */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem 0;
+    border-radius: 2rem; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #092C59; /* Un tono más oscuro del color especificado */
+}
+
+/* Footer */
+footer {
+    width: 100vw; /* Ancho total de la pantalla */
+    background-color: #0A3871; /* Color especificado */
+    padding: 1rem;
+    color: white;
+    border-radius: 0.5rem; /* Bordes redondeados */
+    text-align: right; /* Texto alineado a la derecha */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.75rem; /* Tamaño de fuente 50% menor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-side, .right-side, .buttons {
+        width: 90%;
+    }
+    textarea {
+        width: 90%;
+    }
+    .buttons {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
